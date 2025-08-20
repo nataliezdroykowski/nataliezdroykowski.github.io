@@ -1,64 +1,177 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalie Zdroykowski CS Portfolio</title>
+    <title>Contact - Natalie Zdroykowski</title>
     <link rel="icon" href="images/NZLogo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body> 
-    <div class="navigationbar">
-        <div class="navlogo">
-            <button>
-            <a class="title-a" href="index.html">
-                <h1 class="title"> HOME</h1>
-            </a>
+<body>
+    <!-- Navigation Header -->
+    <header class="navigation" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Natalie Zdroykowski Portfolio Home">HOME</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+                ☰
             </button>
+            
+            <nav role="navigation">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
-            <center> <ul class="menu">
-                <li class = "menuoption"><button> <a href="projects.html"> <span class="menutext">PROJECTS</span> </a> </button></li>
-                <li class = "menuoption"><button> <a href="contact.html"> <span class="menutext">CONTACT</span> </a> </button></li>
-            </ul></center>
-        </a>
-   </div>
+    </header>
 
-   <div class="main-contact">
-        <div class="contact-text">
-            <h1 style="color: rgb(82, 121, 111);">Get in touch:</h1>
-            <h3 style="color: rgb(47, 62, 70);">I'd love to hear from you! Please feel free to reach out whether you have a question,
-                feedback, or just want to connect. You can contact me through any of the options below, or 
-                you can fill out the form if you'd like to send a message directly.
-            </h3>
-            <ul class="contact-links">
-                <a href="mailto:nzdroykowski@gmail.com" target="_blank">
-                 <li class="contact-link"><img src="images/mail.png" class="iconc3">nzdroykowski@gmail.com</li> </a>
-                <a href="https://www.linkedin.com/in/nataliezdroykowski/" target="_blank">
-                 <li class="contact-link"><img src="images/linkedin.png" class="iconc1">nataliezdroykowski</li> </a>
-                <a href="https://github.com/nataliezdroykowski" target="_blank">
-                 <li class="contact-link"><img src="images/github.png" class="iconc2">nataliezdroykowski</li> </a>
-            </ul>
-        </div>
-        <div class="form">
-            <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="11597c1a-987c-48fa-9f4d-2a3cb4708f10">
-                <h4 class="contact-label">Name</h4>
-                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-                <h4 class="contact-label">Email</h4>
-                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-                <h4 class="contact-label">Message</h4>
-                <textarea name="message" placeholder="Your Message" class="contact-inputs2" required></textarea>
-                <center><button class="submit-button" name="submit" type="submit">Submit</button></center>
-            </form>
-        </div>
-   </div>
-   <hr style="width: 95%;">
-   <div class="footer">
-    <h3 class="foot-name" style="color: rgb(47, 62, 70);">Natalie Zdroykowski</h3>
-    <button> <a href="https://www.linkedin.com/in/nataliezdroykowski/" target="_blank"> <img class="icon1" src="images/linkedin.png"> </a> </button>
-    <button> <a href="https://github.com/nataliezdroykowski" target="_blank"> <img class="icon2" src="images/github.png"> </a></button>
-    <button> <a href="mailto:nzdroykowski@gmail.com" target="_blank"> <img class="icon3" src="images/mail.png"> </a> </button>
-   </div>
+    <!-- Main Content -->
+    <main role="main">
+        <div class="contact-container">
+            <!-- Contact Information Section -->
+            <section class="contact-info">
+                <h1 class="contact-title">Get in touch</h1>
+                <p class="contact-description">
+                    I'd love to hear from you! Please feel free to reach out whether you have a question,
+                    feedback, or just want to connect. You can contact me through any of the options below, or 
+                    you can fill out the form if you'd like to send a message directly.
+                </p>
 
-</body> 
+                <ul class="contact-methods">
+                    <li class="contact-method">
+                        <a href="mailto:nzdroykowski@gmail.com" 
+                           class="contact-link"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Send email to Natalie">
+                            <img src="images/mail.png" alt="Email" class="contact-icon">
+                            nzdroykowski@gmail.com
+                        </a>
+                    </li>
+                    <li class="contact-method">
+                        <a href="https://www.linkedin.com/in/nataliezdroykowski/" 
+                           class="contact-link"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View LinkedIn profile">
+                            <img src="images/linkedin.png" alt="LinkedIn" class="contact-icon">
+                            nataliezdroykowski
+                        </a>
+                    </li>
+                    <li class="contact-method">
+                        <a href="https://github.com/nataliezdroykowski" 
+                           class="contact-link"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="View GitHub profile">
+                            <img src="images/github.png" alt="GitHub" class="contact-icon">
+                            nataliezdroykowski
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="contact-form-container">
+                <h2 class="form-title">Send a Message</h2>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="11597c1a-987c-48fa-9f4d-2a3cb4708f10">
+                    
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" 
+                               id="name" 
+                               name="name" 
+                               placeholder="Your Name" 
+                               class="form-input" 
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" 
+                               id="email" 
+                               name="email" 
+                               placeholder="Your Email" 
+                               class="form-input" 
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" 
+                                  name="message" 
+                                  placeholder="Your Message" 
+                                  class="form-textarea" 
+                                  required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-name">Natalie Zdroykowski</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nataliezdroykowski/" 
+                   class="social-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn Profile">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/nataliezdroykowski" 
+                   class="social-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="GitHub Profile">
+                    <img src="images/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="mailto:nzdroykowski@gmail.com" 
+                   class="social-link"
+                   aria-label="Email Contact">
+                    <img src="images/mail.png" alt="Email" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Toggle mobile navigation menu
+         */
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        /**
+         * Close mobile menu when clicking outside of it
+         */
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        /**
+         * Close mobile menu when window is resized to desktop size
+         */
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
 </html>
