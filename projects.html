@@ -1,134 +1,248 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natalie Zdroykowski CS Portfolio</title>
+    <title>Projects - Natalie Zdroykowski</title>
     <link rel="icon" href="images/NZLogo.png">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body> 
-    <div class="navigationbar">
-        <div class="navlogo">
-            <button>
-                <a class="title-a" href="index.html">
-                    <h1 class="title"> HOME</h1>
-                </a>
-                </button>
+<body>
+    <!-- Navigation Header -->
+    <header class="navigation" role="banner">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Natalie Zdroykowski Portfolio Home">HOME</a>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" onclick="toggleMobileMenu()">
+                ☰
+            </button>
+            
+            <nav role="navigation">
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="projects.html" class="nav-link active">PROJECTS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
-            <center> <ul class="menu">
-                <li class = "menuoption"><button> <a href="projects.html"> <span class="menutext">PROJECTS</span> </a> </button></li>
-                <li class = "menuoption"><button> <a href="contact.html"> <span class="menutext">CONTACT</span> </a> </button></li>
-            </ul></center>
-        </a>
-   </div>
-    </center>
-    </div>
-    <div class="featured" style="width: 95%;">
-        <div class="three-projects" style="padding-top: 5%;">
-            <div class="card">
-                <center><img src="images/typing-game.png">
-                
-                 <div class="caption">
-                    <div class="top">
-                        <h2>Z-Type Challenge</h2>
-                        <button class="github">
-                            <a target="_blank" href="https://github.com/nataliezdroykowski/cs2510">
-                                <img src="images/github.png">
-                            </a>
-                        </button>
-                    </div>
-                    <div class="languages">
-                        <button class="tech-small">Java</button>
-                    </div>
-                </div>
-                </center>
-            </div>
-            <div class="card">
-                <center><img src="images/portfolio-website.png">
-                <div class="caption">
-                    <div class="top">
-                        <h2>Portfolio Website</h2>
-                        <button class="github">
-                            <a>
-                                <img src="images/github.png">
-                            </a>
-                        </button>
-                    </div>
-                    <div class="languages">
-                        <button class="tech-small">HTML</button>
-                        <button class="tech-small">CSS</button>
-                    </div>
-                </div>
-                </center>
-            </div>
-            <div class="card">
-                <center><img src="images/memory-game.png">
-                <div class="caption">
-                    <div class="top">
-                        <h2 style="padding-left: 13%;">Memory Game</h2>
-                        <button class="github">
-                            <a target="_blank" href="https://github.com/nataliezdroykowski/MemoryGameJS">
-                                <img src="images/github.png">
-                            </a>
-                        </button>
-                    </div>
-                    <div class="languages">
-                        <button class="tech-small">HTML</button>
-                        <button class="tech-small">CSS</button>
-                        <button class="tech-small">JavaScript</button>
-                    </div>
-                </div>
-                </center>
-            </div>
-        </div>
-        <div class="three-projects" style="padding-top: 0%; padding-bottom: 5%;">
-            <div class="card">
-                <center><img src="images/fnhs-website.png">
-                
-                 <div class="caption">
-                    <div class="top">
-                        <h2>FNHS Club Website</h2>
-                        <button class="github">
-                            <a target="_blank" href="https://github.com/nataliezdroykowski/FNHSwebsite">
-                                <img src="images/github.png">
-                            </a>
-                        </button>
-                    </div>
-                    <div class="languages">
-                        <button class="tech-small">HTML</button>
-                        <button class="tech-small">CSS</button>
-                        <button class="tech-small">JavaScript</button>
-                    </div>
-                </div>
-                </center>
-            </div>
-            <div class="card">
-                <center><img src="images/rsa-encryption.png">
-                <div class="caption">
-                    <div style="padding-left: 5%;" class="top">
-                        <h2>RSA Encryption</h2>
-                        <button class="github">
-                            <a target="_blank" href="https://github.com/nataliezdroykowski/Cybersecurity/blob/main/RSAEncryption.java">
-                                <img src="images/github.png">
-                            </a>
-                        </button>
-                    </div>
-                    <div class="languages">
-                        <button class="tech-small">Java</button>
-                    </div>
-                </div>
-                </center>
-            </div>
-        </div>
-    </div>
-   <hr style="width: 95%;">
-   <div class="footer">
-    <h3 class="foot-name" style="color: rgb(47, 62, 70);">Natalie Zdroykowski</h3>
-    <button> <a href="https://www.linkedin.com/in/nataliezdroykowski/" target="_blank"> <img class="icon1" src="images/linkedin.png"> </a> </button>
-    <button> <a href="https://github.com/nataliezdroykowski" target="_blank"> <img class="icon2" src="images/github.png"> </a></button>
-    <button> <a href="mailto:nzdroykowski@gmail.com" target="_blank"> <img class="icon3" src="images/mail.png"> </a> </button>
-   </div>
+    </header>
 
-</body> 
+    <!-- Main Content -->
+    <main role="main">
+        <!-- Page Header -->
+        <section class="projects-hero">
+            <div class="container">
+                <h1 class="page-title">My Projects</h1>
+                <p class="page-subtitle">
+                    A collection of projects showcasing my technical skills in programming, web development, 
+                    cybersecurity, and problem-solving across various languages and technologies.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-container">
+            <div class="projects-grid">
+                <!-- Z-Type Challenge - Featured -->
+                <article class="project-card featured">
+                    <span class="featured-badge">Featured</span>
+                    <img src="images/typing-game.png" alt="Z-Type Challenge game screenshot" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">Z-Type Challenge</h2>
+                            <a href="https://github.com/nataliezdroykowski/cs2510" 
+                               class="github-link" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="View Z-Type Challenge on GitHub">
+                                <img src="images/github.png" alt="GitHub" class="github-icon">
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            A Java-based typing game inspired by Z-Type, featuring real-time input handling, 
+                            score tracking, and progressively increasing difficulty levels. Built as part of 
+                            Fundamentals of Computer Science II coursework, demonstrating object-oriented programming 
+                            principles and game development concepts.
+                        </p>
+                        <div class="project-skills">
+                            <span class="project-skill">Java</span>
+                            <span class="project-skill">Game Development</span>
+                            <span class="project-skill">OOP</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Portfolio Website - Featured -->
+                <article class="project-card featured">
+                    <span class="featured-badge">Featured</span>
+                    <img src="images/portfolio-website.png" alt="Portfolio website screenshot" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">Portfolio Website</h2>
+                            <a href="https://github.com/nataliezdroykowski/nataliezdroykowski.github.io" 
+                               class="github-link" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="View Portfolio Website on GitHub">
+                                <img src="images/github.png" alt="GitHub" class="github-icon">
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            A responsive personal portfolio website built from scratch using modern web standards. 
+                            Features mobile-first design, accessibility considerations, and a clean professional 
+                            aesthetic. Showcases technical projects and skills for co-op applications.
+                        </p>
+                        <div class="project-skills">
+                            <span class="project-skill">HTML</span>
+                            <span class="project-skill">CSS</span>
+                            <span class="project-skill">Responsive Design</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Memory Game - Featured -->
+                <article class="project-card featured">
+                    <span class="featured-badge">Featured</span>
+                    <img src="images/memory-game.png" alt="Memory game screenshot" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">Memory Game</h2>
+                            <a href="https://github.com/nataliezdroykowski/MemoryGameJS" 
+                               class="github-link" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="View Memory Game on GitHub">
+                                <img src="images/github.png" alt="GitHub" class="github-icon">
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            An interactive memory matching game with dynamic difficulty scaling and engaging 
+                            user experience. Features smooth animations, responsive design, and clean JavaScript 
+                            implementation. Demonstrates DOM manipulation and event handling skills.
+                        </p>
+                        <div class="project-skills">
+                            <span class="project-skill">HTML</span>
+                            <span class="project-skill">CSS</span>
+                            <span class="project-skill">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FNHS Club Website -->
+                <article class="project-card">
+                    <img src="images/fnhs-website.png" alt="FNHS Club Website screenshot" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">FNHS Club Website</h2>
+                            <a href="https://github.com/nataliezdroykowski/FNHSwebsite" 
+                               class="github-link" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="View FNHS Club Website on GitHub">
+                                <img src="images/github.png" alt="GitHub" class="github-icon">
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            A comprehensive website built for the French National Honor Society during high school. 
+                            Created as Vice President to provide information about club activities, events, and 
+                            membership. Demonstrates early web development skills and leadership in technology initiatives.
+                        </p>
+                        <div class="project-skills">
+                            <span class="project-skill">HTML</span>
+                            <span class="project-skill">CSS</span>
+                            <span class="project-skill">JavaScript</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- RSA Encryption -->
+                <article class="project-card">
+                    <img src="images/rsa-encryption.png" alt="RSA Encryption project screenshot" class="project-image">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h2 class="project-title">RSA Encryption</h2>
+                            <a href="https://github.com/nataliezdroykowski/Cybersecurity/blob/main/RSAEncryption.java" 
+                               class="github-link" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               aria-label="View RSA Encryption on GitHub">
+                                <img src="images/github.png" alt="GitHub" class="github-icon">
+                            </a>
+                        </div>
+                        <p class="project-description">
+                            Implementation of the RSA encryption algorithm in Java, demonstrating understanding 
+                            of cryptographic principles and cybersecurity concepts. Built as part of cybersecurity 
+                            coursework to explore public-key cryptography and secure communication methods.
+                        </p>
+                        <div class="project-skills">
+                            <span class="project-skill">Java</span>
+                            <span class="project-skill">Cryptography</span>
+                            <span class="project-skill">Cybersecurity</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-name">Natalie Zdroykowski</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nataliezdroykowski/" 
+                   class="social-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn Profile">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://github.com/nataliezdroykowski" 
+                   class="social-link" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="GitHub Profile">
+                    <img src="images/github.png" alt="GitHub" class="social-icon">
+                </a>
+                <a href="mailto:nzdroykowski@gmail.com" 
+                   class="social-link"
+                   aria-label="Email Contact">
+                    <img src="images/mail.png" alt="Email" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Toggle mobile navigation menu
+         */
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        /**
+         * Close mobile menu when clicking outside of it
+         */
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
+
+        /**
+         * Close mobile menu when window is resized to desktop size
+         */
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                const navMenu = document.getElementById('navMenu');
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
 </html>
